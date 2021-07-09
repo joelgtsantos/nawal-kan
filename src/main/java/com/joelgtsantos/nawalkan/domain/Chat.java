@@ -3,7 +3,9 @@ package com.joelgtsantos.nawalkan.domain;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -29,5 +31,5 @@ public class Chat {
     private String title;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "chat")
-    private Set<Message> messages = new HashSet<>();
+    private List<Message> messages = new ArrayList<>();
 }
