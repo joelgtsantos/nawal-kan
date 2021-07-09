@@ -6,6 +6,9 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 /**
+ * The MessageMapper provides the functions to convert to MessageDTO a Message Entity
+ * and vice versa a Message Entity to MessageDTO
+ *
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.api.v1.mapper
  *

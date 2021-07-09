@@ -6,6 +6,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 /**
+ * The Contact Controller exposes one operation
+ * POST for creating(sending) a new message into the system
+ *
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.controllers
  *

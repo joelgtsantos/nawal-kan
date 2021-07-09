@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * MessageDTO represents the Message JPA entity but only exposing the necessary properties
+ *
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.api.v1.model
  *
