@@ -1,12 +1,14 @@
 package com.joelgtsantos.nawalkan.api.v1.mapper;
 
 import com.joelgtsantos.nawalkan.api.v1.model.ContactDTO;
-import com.joelgtsantos.nawalkan.domain.Chat;
 import com.joelgtsantos.nawalkan.domain.Contact;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 /**
+ * The ContactMapper provides the functions to convert to ContactDTO a Contact Entity
+ * and vice versa a Contact Entity to ContactDTO
+ *
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.api.v1.mapper
  *

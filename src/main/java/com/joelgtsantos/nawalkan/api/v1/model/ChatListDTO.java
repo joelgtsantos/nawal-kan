@@ -7,20 +7,19 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 /**
- * ContactListDTO wraps up a list of contacts
+ * ChatListDTO wraps up a list of contacts
  *
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.api.v1.model
  *
  * @author: Joel Ajucum
- * @since: 7/8/2021
+ * @since: 7/9/2021
  * @version: 0.1
  */
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ContactListDTO {
-
-    List<ContactDTO> contacts;
+public class ChatListDTO {
+    List<ChatDTO> chats;
 }

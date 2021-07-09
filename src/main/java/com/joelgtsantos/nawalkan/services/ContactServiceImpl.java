@@ -55,9 +55,9 @@ public class ContactServiceImpl implements ContactService{
     }
 
     /**
-     * This method is going to persist a {@link com.joelgtsantos.nawalkan.domain.Contact} first then
+     * This method persists a {@link com.joelgtsantos.nawalkan.domain.Contact} first then
      * it will convert the result to a {@link com.joelgtsantos.nawalkan.api.v1.model.ContactDTO}
-     * @param contact this is a JPA entity that is going to be persisted
+     * @param contact this is the JPA entity that is going to be persisted
      * @return it will return a save ContactDTO
      */
     private ContactDTO saveAndReturnDTO(Contact contact){
