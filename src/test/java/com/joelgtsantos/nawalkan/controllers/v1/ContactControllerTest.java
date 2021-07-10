@@ -2,7 +2,6 @@ package com.joelgtsantos.nawalkan.controllers.v1;
 
 import com.joelgtsantos.nawalkan.api.v1.model.ContactDTO;
 import com.joelgtsantos.nawalkan.api.v1.model.ContactListDTO;
-import com.joelgtsantos.nawalkan.controllers.ContactController;
 import com.joelgtsantos.nawalkan.services.ContactService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
- * Unit test for {@link com.joelgtsantos.nawalkan.controllers.ContactController}
+ * Unit test for {@link ContactController}
  *
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.controllers.v1

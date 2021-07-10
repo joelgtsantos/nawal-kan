@@ -1,8 +1,6 @@
 package com.joelgtsantos.nawalkan.controllers.v1;
 
 import com.joelgtsantos.nawalkan.api.v1.model.MessageDTO;
-import com.joelgtsantos.nawalkan.controllers.ChatController;
-import com.joelgtsantos.nawalkan.controllers.MessageController;
 import com.joelgtsantos.nawalkan.domain.Chat;
 import com.joelgtsantos.nawalkan.services.MessageService;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
- *  Unit test for {@link com.joelgtsantos.nawalkan.controllers.MessageController}
+ *  Unit test for {@link MessageController}
  *
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.controllers.v1

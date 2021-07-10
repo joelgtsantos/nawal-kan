@@ -1,4 +1,4 @@
-package com.joelgtsantos.nawalkan.controllers;
+package com.joelgtsantos.nawalkan.controllers.v1;
 
 import com.joelgtsantos.nawalkan.api.v1.model.ContactDTO;
 import com.joelgtsantos.nawalkan.api.v1.model.ContactListDTO;

@@ -1,8 +1,10 @@
-package com.joelgtsantos.nawalkan.controllers;
+package com.joelgtsantos.nawalkan.controllers.v1;
 
 import com.joelgtsantos.nawalkan.api.v1.model.MessageDTO;
 import com.joelgtsantos.nawalkan.services.MessageService;
+import com.joelgtsantos.nawalkan.services.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -29,8 +31,9 @@ public class MessageController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public MessageDTO sendNewMessage(@RequestBody MessageDTO messageDTO){
-
-        return messageService.sendNewMessage(messageDTO);
+    public ResponseEntity  sendNewMessage(@RequestBody MessageDTO messageDTO) throws ResourceNotFoundException {
+        MessageDTO newMessageDTO = messageService.sendNewMessage(messageDTO);
+        return new ResponseEntity<>(newMessageDTO, HttpStatus.CREATED);
+        //return messageService.sendNewMessage(messageDTO);
     }
 }

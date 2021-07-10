@@ -2,7 +2,7 @@ package com.joelgtsantos.nawalkan.services;
 
 import com.joelgtsantos.nawalkan.api.v1.mapper.MessageMapper;
 import com.joelgtsantos.nawalkan.api.v1.model.MessageDTO;
-import com.joelgtsantos.nawalkan.controllers.MessageController;
+import com.joelgtsantos.nawalkan.controllers.v1.MessageController;
 import com.joelgtsantos.nawalkan.domain.Chat;
 import com.joelgtsantos.nawalkan.domain.Contact;
 import com.joelgtsantos.nawalkan.domain.Message;
@@ -54,8 +54,12 @@ public class MessageServiceImpl implements MessageService{
      * @return
      */
     @Override
-    public MessageDTO sendNewMessage(MessageDTO messageDTO) {
+    public MessageDTO sendNewMessage(MessageDTO messageDTO){
         log.info("Sending message");
+        if(!chatRepository.existsById(messageDTO.getChatId())){
+            throw new ResourceNotFoundException("The chat does not exist yet");
+        }
+
         Chat chat = chatRepository.getById(messageDTO.getChatId());
 
         //Apply placeholders

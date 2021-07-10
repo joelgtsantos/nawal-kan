@@ -3,7 +3,7 @@ package com.joelgtsantos.nawalkan.services;
 import com.joelgtsantos.nawalkan.api.v1.mapper.ContactMapper;
 import com.joelgtsantos.nawalkan.api.v1.model.ContactDTO;
 import com.joelgtsantos.nawalkan.api.v1.model.ContactListDTO;
-import com.joelgtsantos.nawalkan.controllers.ContactController;
+import com.joelgtsantos.nawalkan.controllers.v1.ContactController;
 import com.joelgtsantos.nawalkan.domain.Contact;
 import com.joelgtsantos.nawalkan.repositories.ContactRepository;
 import org.springframework.stereotype.Service;

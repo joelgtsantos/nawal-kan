@@ -2,7 +2,6 @@ package com.joelgtsantos.nawalkan.controllers.v1;
 
 import com.joelgtsantos.nawalkan.api.v1.model.ChatDTO;
 import com.joelgtsantos.nawalkan.api.v1.model.ChatListDTO;
-import com.joelgtsantos.nawalkan.controllers.ChatController;
 import com.joelgtsantos.nawalkan.domain.Chat;
 import com.joelgtsantos.nawalkan.domain.Message;
 import com.joelgtsantos.nawalkan.services.ChatService;
@@ -29,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
- * Unit test for {@link com.joelgtsantos.nawalkan.controllers.ChatController}
+ * Unit test for {@link ChatController}
  *
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.controllers.v1
@@ -51,7 +50,7 @@ public class ChatControllerTest {
     MockMvc mockMvc;
 
     /**
-     * This test verifies the {@link com.joelgtsantos.nawalkan.controllers.ChatController#getAllPreviousChats(Long)}
+     * This test verifies the {@link ChatController#getAllPreviousChats(Long)}
      * Based on the ChatID expects the exact number of messages a user has
      *
      * @throws Exception
@@ -88,7 +87,7 @@ public class ChatControllerTest {
     }
 
     /**
-     * This test verifies the {@link com.joelgtsantos.nawalkan.controllers.ChatController#createNewChat(ChatDTO)} (Long)}
+     * This test verifies the {@link ChatController#createNewChat(ChatDTO)} (Long)}
      * expects ChatDTO previously saved in the system
      *
      * @throws Exception
