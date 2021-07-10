@@ -3,6 +3,7 @@ package com.joelgtsantos.nawalkan.services;
 import com.joelgtsantos.nawalkan.api.v1.mapper.MessageMapper;
 import com.joelgtsantos.nawalkan.api.v1.model.ChatDTO;
 import com.joelgtsantos.nawalkan.api.v1.model.MessageDTO;
+import com.joelgtsantos.nawalkan.controllers.v1.MessageController;
 import com.joelgtsantos.nawalkan.domain.Chat;
 import com.joelgtsantos.nawalkan.domain.Message;
 import com.joelgtsantos.nawalkan.domain.Placeholder;
@@ -17,6 +18,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Arrays;
+import java.util.Optional;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
@@ -25,6 +27,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.when;
 
 /**
  * Unit test for {@link com.joelgtsantos.nawalkan.services.MessageServiceImpl}
@@ -75,12 +78,11 @@ public class MessageServiceImplTest {
     @Test
     public void createNewMessage() throws Exception {
         //given
-        ChatDTO chatDTO = new ChatDTO();
-        chatDTO.setTitle(CHAT_NAME);
-
         Chat chat = new Chat();
         chat.setId(CHAT_ID);
         chat.setTitle(CHAT_NAME);
+
+        when(chatRepository.existsById(1L)).thenReturn(true);
 
         Message message = new Message();
         message.setChat(chat);
@@ -89,7 +91,7 @@ public class MessageServiceImplTest {
         message.setToContactId(CHAT_ID);
         message.setFromContactId(CHAT_ID);
 
-        MessageDTO messageDTO = MessageMapper.INSTANCE.messageToMessageDTO(message);
+        MessageDTO messageDTO = new MessageDTO(CHAT_ID,CHAT_ID,MESSAGE,"new",CHAT_ID, MessageController.BASE_URL+"/1");
 
         given(messageRepository.save(any(Message.class))).willReturn(message);
 
