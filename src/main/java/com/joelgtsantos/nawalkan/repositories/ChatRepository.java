@@ -17,6 +17,6 @@ import java.util.List;
  */
 public interface ChatRepository extends JpaRepository<Chat, Long> {
 
-    @Query("select c from Chat c where c.id = (select distinct(m.chat.id) from Message m where m.fromContactId = ?1  )")
+    @Query("select c from Chat c where c.id in (select distinct(m.chat.id) from Message m where m.fromContactId = ?1  )")
     List<Chat> findByFromContact(Long fromId);
 }

@@ -15,6 +15,7 @@ import org.apache.commons.beanutils.PropertyUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.regex.Matcher;
 import java.util.stream.Collectors;
 
 /**
@@ -110,7 +111,7 @@ public class MessageServiceImpl implements MessageService{
 
                                 messageDTO.setMessage(messageDTO.getMessage().replaceAll("\\$\\{" + placeholder.getPropertyName() + "\\}", property));
                             }else {
-                                messageDTO.setMessage(messageDTO.getMessage().replaceAll("\\$\\{" + placeholder.getPropertyName() + "\\}", placeholder.getPropertyValue()));
+                                messageDTO.setMessage(messageDTO.getMessage().replaceAll("\\$\\{" + placeholder.getPropertyName() + "\\}",  Matcher.quoteReplacement(placeholder.getPropertyValue())));
                             }
                         }
                         return messageDTO;

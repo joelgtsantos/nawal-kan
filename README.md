@@ -16,7 +16,7 @@ To run the complete solution clone the GitHub repository project and run the fol
 
 ```bash
 
-- mvn install -o -DskipTests
+- mvn install -DskipTests
 
 - docker compose up --build
 

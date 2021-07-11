@@ -11,6 +11,8 @@ import com.joelgtsantos.nawalkan.repositories.PlaceholderRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 /**
  * Project: nawal-kan
  * Package: com.joelgtsantos.nawalkan.bootstrap
@@ -69,22 +71,27 @@ public class Bootstrap implements CommandLineRunner {
 
         chatRepository.save(chat);
 
+        Chat parent = chatRepository.getById(chat.getId());
+
         Message message1 = new Message();
         message1.setId(1L);
         message1.setMessage("Message 1");
         message1.setStatus("new");
         message1.setFromContactId(1L);
         message1.setToContactId(2L);
-        message1.setChat(chat);
+        message1.setChat(parent);
         messageRepository.save(message1);
 
+        Chat parent2 = chatRepository.getById(chat.getId());
+
         Message message2 = new Message();
-        message2.setId(1L);
+        message2.setId(2L);
         message2.setMessage("Message 2");
         message2.setStatus("new");
         message2.setFromContactId(1L);
         message2.setToContactId(2L);
-        message1.setChat(chat);
+        message1.setChat(parent2);
+
         messageRepository.save(message2);
     }
 
