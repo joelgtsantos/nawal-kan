@@ -93,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"fromContact\": \"joel\",\r\n    \"toContact\": \"alexander\",\r\n    \"message\": \"message\"\r\n}",
+					"raw": "{\r\n    \"fromContact\": 1,\r\n    \"toContact\": 2,\r\n    \"message\": \"message\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -123,7 +123,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"fromContactId\": \"1\",\r\n    \"toContactId\": \"1\",\r\n    \"message\": \"New Bitcoin ${bitcoin} Value ${name}\",\r\n    \"chatId\": 1\r\n}",
+					"raw": "{\r\n    \"fromContactId\": 1,\r\n    \"toContactId\": 2,\r\n    \"message\": \"My name is ${name} and the bitcoin value is  ${bitcoin}\",\r\n    \"chatId\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
