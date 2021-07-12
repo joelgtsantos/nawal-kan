@@ -123,14 +123,14 @@ There are two types of placeholders that can be configured.
 #### 
 - a) The first one has its value directly attached to the 'key'. 
   e.g. 
-  bitcoin - € 28,440.43
-  eur_usd_rate - 1.18
+  - bitcoin - € 28,440.43
+  - eur_usd_rate - 1.18
 
 #### 
 - b) The second one, the value is going to be retrieved from the Contact attributes, the 'Key' should contain the word 'contact_attributes', and the 'Value' has the contact attribute. 
   e.g.
-  name - contact_attributes
-  telephone - contact_attributes
+  - name - contact_attributes
+  - telephone - contact_attributes
 
 ### Usage
 
